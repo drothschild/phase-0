@@ -44,3 +44,10 @@ Yes.
 - help I don't believe we used the help command, just the man command.
 
 # 1.4 Forking and Cloning Reflection
+Creating a new repository: log on to Github, go to your profile, and pull down the plus signal menu on the upper right hand side. Click New repository. Give it a name, select the options and licensing you want, and click create
+
+To fork an existing Github repository, go to it and click fork on the right hand side of the screen. Select whether you want to clone it as yourself or as an organization. Click Ok.
+
+To clone a repo, first copy its clone url from the middle right hand side of the screen. Then go to your terminal, navigate to the folder you want to clone it to, and type "git clone " and then your copied url. You may have to enter your github password.
+
+Forking a repository is essential to collaboration. You need to fork so that you can work on an existing project, and possibly send your contributions back to the main project.
