@@ -27,4 +27,4 @@ I find the routine of working with git soldified in this challenge. I still have
 
 * Did you find any resources on your own that helped you better understand a topic? If so, please list it.
 
-I looked up some things on Wikipedia, but not really.
+This cheat sheet for git helped me, though I'll end up creating my own.https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
