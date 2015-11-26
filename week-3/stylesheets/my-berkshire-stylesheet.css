@@ -1,0 +1,50 @@
+
+
+body {
+    color: #000080;
+    background-color: #ffffff;
+}
+header {
+  text-align: center;
+
+font-weight: bold;
+
+  font-size: 20px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+
+}
+footer {
+  border-style: solid;
+        border-width: 1px 0px 0px 0px;
+
+ }
+a {
+    color: #800080;
+}
+a:visited {
+    color: #ff0000;
+}
+
+.links {
+    float:left;
+    width: 50%;
+}
+
+
+.link-text
+ {
+  font-size: 10px;
+ }
+ .large-caps {
+  font-size: 32px;
+ }
+ .ad {
+  border-style: solid;
+
+    border-width: 1px 0px 1px 0px;
+
+    text-align: center;
+ }
+
+
