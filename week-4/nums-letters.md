@@ -16,3 +16,4 @@ puts (10*365+2)*24*60
 ```
 https://github.com/drothschild/phase-0/blob/master/week-4/defining-variables.rb
 
+https://github.com/drothschild/phase-0/blob/master/week-4/simple-string.rb
