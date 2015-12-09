@@ -1,8 +1,8 @@
 # Pad an Array
 
-# I worked on this challenge [by myself, with: ]
+# I worked on this challenge Mikhal
 
-# I spent [] hours on this challenge.
+# I spent 1 hours on this challenge.
 
 
 # Complete each step below according to the challenge directions and
@@ -81,6 +81,8 @@ end
 # Was your initial solution successful at passing the tests? If so, why do you think that is? If not, what were the errors you encountered and what did you do to resolve them?
 # Again, there were grammars errors the first time, but we resolved them within a few minutes. Then it passed all the tests.
 # When you refactored, did you find any existing methods in Ruby to clean up your code?
-# concat was
+# concat was slightly better than looping and shovelling the values into new array. But mainly, we removed unnecssary code.
 # How readable is your solution? Did you and your pair choose descriptive variable names?
+# I think it's readable. There's only one variable in the refactored solution that wasn't given in the initial assignment
 # What is the difference between destructive and non-destructive methods in your own words?
+# Destructive changes the variable inputted into the method. Non-destructive creates a new method and returns that.
