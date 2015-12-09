@@ -85,14 +85,6 @@ def initialize_list(desired_start_items)
 end
 
 
-
-# my_string
-# my_string.split(' ') => array
-
-# array.each do |item_name|
-
-  # Array#include?(element)
-
 def add_item(item_name, qty = 1)
 # For each item, check if the item already exists in the hash.
   if $list_items.include?(item_name)
@@ -145,3 +137,19 @@ add_item("apple", 1)
 display_list
 # => {"Apples" => 1}
 
+
+
+#What did you learn about pseudocode from working on this challenge?
+# Honestly, I learned more on other challenges, but I found it useful here for thinking out.
+#What are the tradeoffs of using Arrays and Hashes for this challenge?
+# Well, for the grocery list, I can't see any advantage of using an array, you need the keys and values to keep track of quantity. On the other hand, the initial list, you have to set it to an array in order to parse it. Arrays, as our instructor point
+#What does a method return?
+# Any object, or in this case, nothing. (In this case, most of them just set global variables or print)
+#What kind of things can you pass into methods as arguments?
+# any object.
+#How can you pass information between methods?
+# through arguments, or through variables that both methods can access (in this case, global variables)
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+# Solidified: global variables, driver code, include? method.
+# Still unclear: variable scope.
+# Also we sort of coded and pseudo-coded at once, and refactored as we went, which isn't the best thing.
