@@ -62,20 +62,25 @@
 
 # 3. Refactored Solution
 def pad!(array, min_size, value = nil) #destructive
-  if min_size >= array.count
-   # pad_size = min_size - array.count
-    (min_size - array.count).times {array << value}
-  end
-    array
+   (min_size - array.count).times {array << value}
+   array
 end
 
 def pad(array, min_size, value = nil) #non-destructive
   new_array = []
-  # array.each {|item| new_array << item}
   new_array.concat(array)
-  if min_size >= array.count
-    pad_size = min_size - new_array.count
-    pad_size.times {new_array << value}
-  end
-   new_array
+    (min_size - new_array.count).times {new_array << value}
+  new_array
 end
+
+
+# Were you successful in breaking the problem down into small steps?
+# Yes, though it didn't need to be broken down that much
+# Once you had written your pseudocode, were you able to easily translate it into code? What difficulties and successes did you have?
+#  Prety easily. We got some of the grammar of Ruby wrong at first, brackets rather than parenthesis, shovel the wrong way. but it worked as said.
+# Was your initial solution successful at passing the tests? If so, why do you think that is? If not, what were the errors you encountered and what did you do to resolve them?
+# Again, there were grammars errors the first time, but we resolved them within a few minutes. Then it passed all the tests.
+# When you refactored, did you find any existing methods in Ruby to clean up your code?
+# concat was
+# How readable is your solution? Did you and your pair choose descriptive variable names?
+# What is the difference between destructive and non-destructive methods in your own words?
