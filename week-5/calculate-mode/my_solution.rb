@@ -21,7 +21,7 @@
 # ELSE Make a new key(element) with the value of 1.
 # END Loop
 #
-#LOOP Through hash and find largest value and create array with key
+#LOOP Through hash and find largest value and create array with
 # HASH.max values
 # Create an array with key
 # Output array
@@ -48,11 +48,24 @@
 
 # 3. Refactored Solution
 
-def mode (array)
+def mode (a)
   h = Hash.new
-  array.each {|e| h[e] = array.count(e)}
+  a.each {|e| h[e] = a.count(e)}
   h.select {|e,v| v == h.values.max}.keys
 end
 
 
 # 4. Reflection
+
+#Which data structure did you and your pair decide to implement and why?
+# A hash, frankly because the instructions hinted at it so heavily. (And then an array again to return.)
+
+#Were you more successful breaking this problem down into implementable pseudocode than the last with a pair?
+# Actually I think I did better the last time. This broke down in the second half.
+
+#What issues/successes did you run into when translating your pseudocode to code?
+# Figuring the right code for max was difficult.
+
+#What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+
+# each, and select were used at both stages, and I'm pretty comfortable with both, though each We attempted to work with max_by, but we misunderstood that one(It only returns a key value pair of one maximum, not several that are the same)
