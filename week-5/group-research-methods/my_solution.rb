@@ -40,14 +40,26 @@ end
 # =~ equals regular expression
 #
 
-# Person 2
 def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.map! { |x|
+    if x.is_a?(Integer)
+      x + thing_to_modify
+    else
+      x
+    end
+    }
 end
 
+my_array_modification_method!(i_want_pets, 1)
+
+
 def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.each do |key, value|
+    source[key] = value + 2
+  end
 end
+
+my_hash_modification_method!(my_family_pets_ages, 2)
 
 # Identify and describe the Ruby method(s) you implemented.
 #
@@ -57,17 +69,18 @@ end
 
 # Person 3
 def my_array_sorting_method(source)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  p source.sort {|x,y| x.to_s <=> y.to_s}
 end
 
 def my_hash_sorting_method(source)
-   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  p source.sort_by { |k,v| v}
 end
 
 # Identify and describe the Ruby method(s) you implemented.
 #
 #
 #
+
 
 
 # Person 4
