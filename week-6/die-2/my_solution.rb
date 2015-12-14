@@ -50,7 +50,7 @@
 # Refactored Solution
 class Die
   def initialize(labels)
-    raise ArgumentError.new ("Dice need at least one side") if labels.count == 0
+    raise ArgumentError.new ("Dice need at least one side") if labels.count < 1
     @labels = labels
     @sides = @labels.count
   end
@@ -64,10 +64,12 @@ class Die
   end
 end
 
-
-
-
-
-
-
 # Reflection
+# What were the main differences between this die class and the last one you created in terms of implementation? Did you need to change much logic to get this to work?
+# The main difference was the addition of an array of labels
+# What does this exercise teach you about making code that is easily changeable or modifiable?
+# The code in the previous challenge was solid, if I do say so myself, so it was easy to redo in this example
+# What new methods did you learn when working on this challenge, if any?
+# No new methods.
+# What concepts about classes were you able to solidify in this challenge?
+# Instance variabls are different from local variables.
