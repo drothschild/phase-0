@@ -32,6 +32,7 @@
 
 # Initial Solution
 
+=begin
 class BingoBoard
 
   def initialize(board)
@@ -59,6 +60,7 @@ class BingoBoard
     column = "BINGO".index(letter)
     puts letter + "\n--"
     @bingo_board.each {|row| puts row[column]}
+    puts
   end
 
    def display_board
@@ -73,6 +75,54 @@ class BingoBoard
     print "\n"
   end
 end
+=end
+
+# Refactored Solution
+class BingoBoard
+
+  def initialize(board)
+    @bingo_board = board
+  end
+
+  def call
+    letter = "BINGO"[rand(5)]
+    number = rand(100) + 1
+    [letter, number]
+  end
+
+  def check (array)
+    column = "BINGO".index(array[0])
+    number = array[1]
+    @bingo_board.map do |row|
+      if row[column] == number
+        row[column] = "X"
+        puts array.join
+      end
+    end
+  end
+
+ def display_column (letter)
+    column = "BINGO".index(letter)
+    puts letter + "\n--"
+    @bingo_board.each {|row| puts row[column]}
+    puts
+  end
+
+   def display_board
+    24.times{print "-"}
+    print "\n"
+    puts "B   I   N   G   O"
+    @bingo_board.each do |row|
+       row.each {|item| print item.to_s.ljust(4)}
+      print "\n"
+    end
+    24.times{print "-"}
+    print "\n"
+  end
+end
+
+
+
 
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
@@ -92,7 +142,34 @@ new_game.display_board
 
 
 
+#Reflection
 
+# How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
+# It was definitely difficult, though not too difficult.
+# I realized I didn't think through the display of rows well when it came to coding
+
+# What are the benefits of using a class for this challenge?
+# The storing of the the board inside the class instance is definitely the big advantage.
+
+# How can you access coordinates in a nested array?
+# [array][nested_array]
+
+# What methods did you use to access and modify the array?
+# index, each
+
+# Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?
+#  ljust
+#  it returns the string padded to an integer length(by default with Spaces). Would have taken a lot of work to code that for myself
+#  string.ljust(integer, padstr=' ') → new_str
+
+# How did you determine what should be an instance variable versus a local variable?
+# I made everything new a local variable, because it kept the methods flexible.
+# I could have made the combination returned by call an instance variable, but then the check method could only check that.
+# The board makes sense as an instance variable, since it's being changed each time.
+# I suppose if it were a true bingo solution, and each letter-number combination could only be called once, then it would make sense to make an instance array of called combos
+
+# What do you feel is most improved in your refactored solution?
+# Honestly, it's not that refactored between the two.
 
 
 
@@ -223,34 +300,6 @@ puts "-- Checking 100 Numbers --"
 sleep 1.8
 puts "-- Printing New Board --"
 new_game.display_board
-#Reflection
 
-# How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
-# It was definitely difficult, though not too difficult.
-# I realized I didn't think through the display of rows well when it came to coding
-
-# What are the benefits of using a class for this challenge?
-# The storing of the the board inside the class instance is definitely the big advantage.
-
-# How can you access coordinates in a nested array?
-# [array][nested_array]
-
-# What methods did you use to access and modify the array?
-# index, each
-
-# Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?
-#  ljust
-#  it returns the string padded to an integer length(by default with Spaces). Would have taken a lot of work to code that for myself
-#  string.ljust(integer, padstr=' ') → new_str
-
-# How did you determine what should be an instance variable versus a local variable?
-# I made everything new a local variable, because it kept the methods flexible.
-# I could have made the combination returned by call an instance variable, but then the check method could only check that.
-# The board makes sense as an instance variable, since it's being changed each time.
-# I suppose if it were a true bingo solution, and each letter-number combination could only be called once, then it would make sense to make an instance array of called combos
-
-# What do you feel is most improved in your refactored solution?
-# the refactored solution spins printing a row off into its own method.
-# And that cuts down on the repeated code.
 =end
 
