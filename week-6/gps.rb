@@ -112,4 +112,3 @@ p serving_size_calc("cookie", 10)
 # it's easiest to access it through it's natural methods of accessing a key rather than looping through.
 # What concepts were solidified when working through this challenge?
 # refactoring is a multi-step process that should be tested every step. First rename variables and generally improve readability. Then go after logic, redundancy.
-
