@@ -1,7 +1,105 @@
 
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
+# A note: I got confused about this challenge originally and thought the corresponding letters were on the side of board, rather than the top. Below if you scroll down, you can see my initial solution.
+# Release 0: Pseudocode
+# Outline:
 
-# I spent [2.5] hours on this challenge.
+# Create a method to GENERATE A LETTER ( b, i, n, g, o) and a number (1-100)
+#   generate a random number from 0-4
+#   based on that, pick a letter from b to o
+#   generate a random number from 1-100
+#   Print and return letter and Integer
+
+# CHECK THE CALLED COLUMN (Letter, integer) for the number called, and check off.
+# Calculate a position number based on Letter
+# LOOP Through each row item in board
+# => IF the number at the position number equals the integer, replace it with X
+# =>  Display the column
+# => END IF
+# END LOOP
+
+# DISPLAY A COLUMN to the console based on (letter) called.
+# Input: Letter
+# Calculate a position number based on letter
+# LOOP Through each row item in board
+# => Display that number (or x)
+# END LOOP
+
+# Display the board to the console (prettily)
+# Print the word BINGO to the screen, each letter padded with 3 spaces.
+# Print each column to the screen, each letter padded with three spaces.
+# =>
+
+# Initial Solution
+
+class BingoBoard
+
+  def initialize(board)
+    @bingo_board = board
+  end
+
+  def call
+    letter = "BINGO"[rand(5)]
+    number = rand(100) + 1
+    [letter, number]
+  end
+
+  def check (array)
+    column = "BINGO".index(array[0])
+    number = array[1]
+    @bingo_board.each do |row|
+      if row[column] == number
+        row[column] = "X"
+        display_column(array[0])
+      end
+    end
+  end
+
+ def display_column (letter)
+    column = "BINGO".index(letter)
+    puts letter + "\n--"
+    @bingo_board.each {|row| puts row[column]}
+  end
+
+   def display_board
+    24.times{print "-"}
+    print "\n"
+    puts "B   I   N   G   O"
+    @bingo_board.each do |row|
+       row.each {|item| print item.to_s.ljust(4)}
+      print "\n"
+    end
+    24.times{print "-"}
+    print "\n"
+  end
+end
+
+
+#DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
+board = [[47, 44, 71, 8, 88],
+        [22, 69, 75, 65, 73],
+        [83, 85, 97, 89, 57],
+        [25, 31, 96, 68, 51],
+        [75, 70, 54, 80, 83]]
+new_game = BingoBoard.new(board)
+new_game.display_board
+sleep 0.8
+puts "-- Checking 100 Numbers --"
+100.times {new_game.check(new_game.call)}
+sleep 1.8
+puts "-- Printing New Board --"
+new_game.display_board
+
+
+
+
+
+
+
+
+=begin
+
+# I spent [2.5] hours on this challenges
 
 
 # Release 0: Pseudocode
@@ -11,7 +109,7 @@
 #   generate a random number from 0-4
 #   based on that, pick a letter from b to o
 #   generate a random number from 1-100
-#   Print and return letter and Integer
+#   Print and return letter and Integer in an array.
 
 # CHECK THE CALLED COLUMN (Letter, integer) for the number called, and check off.
 
@@ -154,4 +252,5 @@ new_game.display_board
 # What do you feel is most improved in your refactored solution?
 # the refactored solution spins printing a row off into its own method.
 # And that cuts down on the repeated code.
+=end
 
