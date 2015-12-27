@@ -1,0 +1,60 @@
+Release 1:
+
+Introduction:
+• Did you learn anything new about JavaScript or programming in general?
+The history of programming from ones and zeroes to javascript was very interesting. I also didn't know Javascript is a "liberal" language.
+• Are there any concepts you feel uncomfortable with?
+No I think I got it for the introduction
+Chapter 1:
+• Identify two similarities and two differences between JavaScript and Ruby syntax with regard to numbers, arithmetic, strings, booleans, and various operators.
+One key similarity is arithimetic operations can be written out in roughly the same way as before. In additon "+" is used to concatenate numbers in a similar way.
+One key difference is that there is no distinction made between whole integers and numbers with decimals. In addition, multiplying a string by a number will return "NAN" - not a number.
+Chapter 2:
+• What is an expression?
+a fragment of code that produces a value.
+• What is the purpose of semicolons in JavaScript? Are they always required?
+To indicate the end of a statement, and no they aren't always, but we should act as though they are
+• What causes a variable to return undefined?
+If it's empty.
+• What does console.log do and when would you use it? What Ruby method(s) is this similar to?
+Console log outputs info onto some device. It's similar to puts in ruby.
+
+•Describe while and for loops
+While loop repeats some statements while a certain condition is true. For loop repeats a statement based on a counter that iterates.
+• What other similarities or differences between Ruby and JavaScript did you notice in this section?
+The if statement is similar, as is the +=.
+
+Chapter 3
+
+• What are the differences between local and global variables in JavaScript?
+Local variables are only active inside the function that they're defined in. NOT the block, just the function. Global variables are active anywhere in the program.
+
+•When should you use functions?
+Whenever you need to  do something not defined in Javascript's language, particularly when you need to repeat something.
+
+•What is a function declaration?
+
+function something(){
+  return
+}
+-it doesn't have the var =
+Chapter 4:
+
+•What is the difference between using a dot and a bracket to look up a property? Ex. array.max vs array["max"]
+
+The brackets is a string that can be changed if it's a variable, but otherwise needs to be in quotes.
+
+•What is a JavaScript object with a name and value property similar to in Ruby?
+
+Hash
+
+Release 2:
+•What are the biggest similarities and differences between JavaScript and Ruby?
+
+Math works in similar ways, as do local variables, and arrays. On the other hand, the loops possiblities are considerably less, though you can recreate them using your own functions.  In addition, the way functions deal with input variables
+
+Was some of your Ruby knowledge solidified by learning another language? If so, which concepts?
+To be honest, no.
+
+How do you feel about diving into JavaScript after reading these chapters?
+A bit nervous, but it doesn't seem too different at the moment.
