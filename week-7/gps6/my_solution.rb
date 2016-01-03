@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Sharon Claitor ].
+# We spent [1.5] hours on this challenge.
 
 # EXPLANATION OF require_relative
 #
@@ -245,3 +245,13 @@ end
 
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The first is a string in quotation marks, while the second is a symbol.
+# What does require_relative do? How is it different from require?
+# require relative means that it requires a file relative to the current file's path in the directory. Require plain indicates would indicate it needs a literal path.
+# What are some ways to iterate through a hash?
+# Each do is a good one. I like Map as well.
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# There were local variables and instance variables. By and large the instance variables were unneeded.
+# What concept did you most solidify in this challenge?
+# Pilot code and the fact that there could be more than simple statements in pilot code.
