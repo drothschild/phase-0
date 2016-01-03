@@ -127,7 +127,7 @@ player.take (chicken)
 // Reflection
 // What was the most difficult part of this challenge?
 // Finding bugs was the hardest part of the challenge, since the console often didn't tell me what line was wrong.
-// Also programming all the different permutations that could happen with 4 objects. I left an easter egg, where you can shoot, cook, and eat yourself, at which point you will ascend to heaven, and can eat the chicken all over again.
+// Also programming all the different permutations of 4 objects that could be acted upon. I left an easter egg, where you can shoot, cook, and eat yourself, at which point you will ascend to heaven, and can eat the chicken all over again.
 // Also, I spent a while trying to delete an object, before deciding to just change its location to heaven.
 // What did you learn about creating objects and functions that interact with one another?
 // Functions are objects, even if they're within other objects.
