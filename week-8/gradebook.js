@@ -1,7 +1,7 @@
 /*
 Gradebook from Names and Scores
-I worked on this challenge [by myself, with:]
-This challenge took me [#] hours.
+I worked on this challenge [by myself, with: Jovanka Nikolovski]
+This challenge took me [.5] hours.
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
 variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
@@ -61,7 +61,7 @@ var scores = [ [80, 70, 70, 100],
  var gradebook = {};
  for (var i=0; i < students.length; i++) {
   gradebook[students[i]] = {};
-   gradebook[students[i]].testScores= scores[i];
+   gradebook[students[i]].testScores = scores[i];
  }
 
 gradebook.addScore = function (name, score) {
@@ -89,6 +89,18 @@ function average(array){
 
 // __________________________________________
 // Reflect
+/*
+What did you learn about adding functions to objects?
+It's relatively easy to do with dot notation. And you can add functions after the object is defined.
+
+How did you iterate over nested arrays in JavaScript?
+Similar to arrays in Ruby, but you have to put variables in brackets.
+
+Were there any new methods you were able to incorporate? If so, what were they and how did they work?
+I looked at a "prototype" method for summing in a different way, but wasn't sure if it was a good idea to use.
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 
 
@@ -96,11 +108,9 @@ function average(array){
 
 
 
-
-
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
-
 
 function assert(test, message, test_number) {
   if (!test) {
