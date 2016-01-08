@@ -11,7 +11,8 @@
 # END HORIZONTAL SOLVER
 
 # VERTICAL SOLVER
-# LOOP i = 5 times
+# LOOP through first row with index
+# # set Column text to the  the row = "xxxx"
 
 
 
