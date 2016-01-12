@@ -159,3 +159,14 @@ safewayList.removeItem ("oranges");
 safewayList.removeItem ("Steel Cut Oats");
 safewayList.printList();
 
+// Reflect
+// What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
+// Constructors really feels solidified here.
+
+// What was the most difficult part of this challenge?
+// Redoing the pseudo code
+
+// Did an array or object make more sense to use and why?
+//  An object, because we were storing two things- an item and its quantity.
+// I made it an object within an object in case we were adding properties like total, or store name, etc.
+
