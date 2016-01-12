@@ -1,3 +1,6 @@
+// Shopping List is at:
+// https://github.com/drothschild/phase-0/blob/master/week-9/shopping_list.js
+
 // Bingo Challenge 1
 // In javascript this time.
 // PSEUDOCODE
